@@ -610,3 +610,64 @@ h2.visible {
 	background: linear-gradient(90deg, #8b5cf6, #3b82f6);
 	box-shadow: 0 0 12px rgba(139, 92, 246, 0.6);
 }
+
+.popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 250px;
+    max-width: 90%;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    font-family: Arial, sans-serif;
+    display: none; /* Hidden by default */
+    z-index: 9999;
+  }
+
+  /* Close button */
+  .popup .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  /* Optional: popup animation */
+  .popup.show {
+    display: block;
+    animation: slideIn 0.3s ease-out;
+  }
+
+  @keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  /* Button to trigger popup */
+  .show-popup-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 14px;
+    z-index: 10000;
+  }
+
+  /* Responsive text */
+  @media(max-width: 400px){
+    .popup {
+      width: 90%;
+      padding: 12px 15px;
+    }
