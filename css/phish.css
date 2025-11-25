@@ -49,6 +49,7 @@ input {
 }
 
 .btn {
+  display: inline-block;   /* IMPORTANT — for <a> */
   width: 100%;
   padding: 0.9rem;
   margin-top: 0.8rem;
@@ -60,7 +61,10 @@ input {
   font-size: 1.1rem;
   cursor: pointer;
   transition: 0.25s;
+  text-decoration: none;   /* Remove underline */
+  text-align: center;      /* Center the text */
 }
+
 
 .btn:hover {
   filter: brightness(1.2);
@@ -72,34 +76,60 @@ input {
   margin-top: 1rem;
 }
 
-.alert-box {
-  text-align: center;
-  max-width: 460px;
-  width: 90%;
-  margin: auto;
-  color: white;
-  font-family: Arial, sans-serif;
-  padding-top: 20vh;
+.small-print {
+  font-size: 0.75rem;
+  opacity: 0.5;
+  margin-top: 1rem;
 }
 
+/* Центрирование по вертикали и горизонтали */
+.alert-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  max-width: 480px;
+  width: 90%;
+  margin: auto;
+  min-height: 100vh; /* Центрирование по экрану */
+
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 1rem;
+}
+
+/* Заголовок */
 .alert-box h1 {
-  font-size: 3rem;
+  font-size: clamp(2.4rem, 6vw, 3.6rem); /* адаптивный размер */
   margin-bottom: 1rem;
   color: #ff6b6b;
 }
 
+/* Основной текст */
+.alert-box p {
+  font-size: clamp(1.1rem, 3.5vw, 1.35rem);
+  line-height: 1.4;
+}
+
+/* Маленький текст */
 .alert-box .small {
   opacity: 0.6;
   margin-top: 1rem;
+  font-size: clamp(1rem, 3vw, 1.2rem);
 }
 
+/* Кнопка */
 .continue-btn {
   display: inline-block;
   margin-top: 2rem;
   background: linear-gradient(135deg, #a78bfa, #60a5fa);
-  padding: 1rem 2.2rem;
+  padding: 1rem 2.4rem;
   border-radius: 14px;
   color: white;
   text-decoration: none;
   font-weight: bold;
+
+  font-size: clamp(1.1rem, 3.5vw, 1.3rem); /* адаптив */
 }
