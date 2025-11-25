@@ -69,6 +69,24 @@
     </p>
   </div>
 </section>
+<!-- Trigger button -->
+<button class="show-popup-btn" onclick="showPopup()">Check yourself</button>
+
+<!-- Popup -->
+<div class="popup" id="miniPopup">
+  <button class="close-btn" onclick="closePopup()">×</button>
+  <p>Test yourself and get a prise! <a href='' style='color:white'>link on a test</a></p>
+</div>
+
+<script>
+  function showPopup() {
+    document.getElementById('miniPopup').classList.add('show');
+  }
+
+  function closePopup() {
+    document.getElementById('miniPopup').classList.remove('show');
+  }
+</script>
 
   <!-- WHAT -->
   <section id="what" class="section">
