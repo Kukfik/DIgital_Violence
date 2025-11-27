@@ -79,12 +79,14 @@
 </div>
 
 <script>
-  function showPopup() {
+    function showPopup() {
     document.getElementById('miniPopup').classList.add('show');
+    document.querySelector('.show-popup-btn').classList.add('hide');
   }
 
   function closePopup() {
     document.getElementById('miniPopup').classList.remove('show');
+    document.querySelector('.show-popup-btn').classList.remove('hide');
   }
 </script>
 
@@ -489,4 +491,5 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+
 
